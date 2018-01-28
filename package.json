@@ -1,0 +1,31 @@
+{
+  "name": "@tm/lib.common",
+  "version": "1.0.0",
+  "description": "Common library for MBB apps",
+  "main": "bin/index.js",
+  "typings": "bin/index",
+  "scripts": {
+    "clean": "rimraf bin/*",
+    "build": "npm run clean && npm up && tsc",
+    "b": "npm run build",
+    "prepublishOnly": "npm version patch && npm run build",
+    "p": "npm publish --access public"
+  },
+  "keywords": [],
+  "author": "MyBestBook.NET",
+  "license": "UNLICENSED",
+  "repository": {
+    "url": "https://github.com/thanhptr/tm.lib.common.git"
+  },
+  "devDependencies": {
+    "@types/node": "^8.5.9",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "inversify": "^4.10.0",
+    "inversify-binding-decorators": "^3.2.0",
+    "inversify-inject-decorators": "^3.1.0",
+    "reflect-metadata": "^0.1.12",
+    "rimraf": "^2.6.2"
+  }
+}

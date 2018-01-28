@@ -1,0 +1,5 @@
+import { interfaces } from "inversify";
+export declare const iocContainer: interfaces.Container;
+export declare let lazyInject: (serviceIdentifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>) => (proto: any, key: string) => void, lazyInjectNamed: (serviceIdentifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>, named: string) => (proto: any, key: string) => void, lazyInjectTagged: (serviceIdentifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>, key: string, value: any) => (proto: any, propertyName: string) => void, lazyMultiInject: (serviceIdentifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>) => (proto: any, key: string) => void;
+export declare const injectableNamed: (identifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>, name: string) => (target: any) => any;
+export declare const injectableSingleton: (identifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>) => (target: any) => any;

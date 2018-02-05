@@ -8,7 +8,7 @@
     "clean": "rimraf bin/*",
     "build": "yarn run clean && yarn && tsc",
     "b": "yarn run build",
-    "prepublishOnly": "npm version patch && yarn run build",
+    "prepublishOnly": "npm version patch && yarn run build && git push origin",
     "p": "npm publish --access public"
   },
   "keywords": [],

@@ -1,5 +1,5 @@
 {
-  "name": "@tm/lib.common",
+  "name": "@gtm/lib.common",
   "version": "1.0.0",
   "description": "Common library for MBB apps",
   "main": "bin/index.js",
@@ -15,7 +15,7 @@
   "author": "MyBestBook.NET",
   "license": "UNLICENSED",
   "repository": {
-    "url": "https://github.com/thanhptr/tm.lib.common.git"
+    "url": "https://github.com/thanhptr/gtm.lib.common.git"
   },
   "devDependencies": {
     "@types/node": "^9.4.0",

@@ -1,8 +1,9 @@
 import { Container, interfaces } from "inversify";
-import { fluentProvide } from 'inversify-binding-decorators';
+import { fluentProvide, buildProviderModule } from 'inversify-binding-decorators';
 import getDecorators from "inversify-inject-decorators";
 
 export const iocContainer: interfaces.Container = <interfaces.Container>new Container();
+iocContainer.load(buildProviderModule());
 
 export let {
   lazyInject,

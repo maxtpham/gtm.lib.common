@@ -9,11 +9,11 @@ _a = inversify_inject_decorators_1.default(exports.iocContainer), exports.lazyIn
 exports.injectableNamed = function (identifier, name) {
     return inversify_binding_decorators_1.fluentProvide(identifier)
         .whenTargetNamed(name)
-        .done();
+        .done(true);
 };
 exports.injectableSingleton = function (identifier) {
     return inversify_binding_decorators_1.fluentProvide(identifier)
         .inSingletonScope()
-        .done();
+        .done(true);
 };
 //# sourceMappingURL=IocContainer.js.map

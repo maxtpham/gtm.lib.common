@@ -17,7 +17,7 @@ export const injectableNamed = function(
 ) {
     return fluentProvide(identifier)
       .whenTargetNamed(name)
-      .done();
+      .done(true);
 };
 
 export const injectableSingleton = function(
@@ -25,5 +25,5 @@ export const injectableSingleton = function(
 ) {
     return fluentProvide(identifier)
       .inSingletonScope()
-      .done();
+      .done(true);
 };

@@ -5,6 +5,7 @@ const inversify_1 = require("inversify");
 const inversify_binding_decorators_1 = require("inversify-binding-decorators");
 const inversify_inject_decorators_1 = require("inversify-inject-decorators");
 exports.iocContainer = new inversify_1.Container();
+exports.iocContainer.load(inversify_binding_decorators_1.buildProviderModule());
 _a = inversify_inject_decorators_1.default(exports.iocContainer), exports.lazyInject = _a.lazyInject, exports.lazyInjectNamed = _a.lazyInjectNamed, exports.lazyInjectTagged = _a.lazyInjectTagged, exports.lazyMultiInject = _a.lazyMultiInject;
 exports.injectableNamed = function (identifier, name) {
     return inversify_binding_decorators_1.fluentProvide(identifier)

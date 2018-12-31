@@ -1,5 +1,5 @@
 import { Container, interfaces } from "inversify";
-import { makeFluentProvideDecorator } from 'inversify-binding-decorators';
+import { fluentProvide } from 'inversify-binding-decorators';
 import getDecorators from "inversify-inject-decorators";
 
 export const iocContainer: interfaces.Container = <interfaces.Container>new Container();
@@ -11,13 +11,11 @@ export let {
   lazyMultiInject
 } = getDecorators(iocContainer);
 
-const fluentProvider = makeFluentProvideDecorator(iocContainer);
-
 export const injectableNamed = function(
   identifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>,
   name: string
 ) {
-    return fluentProvider(identifier)
+    return fluentProvide(identifier)
       .whenTargetNamed(name)
       .done();
 };
@@ -25,7 +23,7 @@ export const injectableNamed = function(
 export const injectableSingleton = function(
   identifier: string | symbol | interfaces.Newable<any> | interfaces.Abstract<any>
 ) {
-    return fluentProvider(identifier)
+    return fluentProvide(identifier)
       .inSingletonScope()
       .done();
 };

@@ -1,6 +1,6 @@
 {
   "name": "@gtm/lib.common",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Common library for MBB apps",
   "main": "bin/index.js",
   "typings": "bin/index",
